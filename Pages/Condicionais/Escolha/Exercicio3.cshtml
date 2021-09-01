@@ -1,0 +1,47 @@
+﻿@page
+@model Exercicios.Pages.Condicionais.Escolha.Exercicio3Model
+@{
+    ViewData["Title"] = "Natação";
+}
+
+<h1 class="text-center display-4">Estrutura Condicional - Switch</h1>
+<h2 class="text-center display-4">Exercício 3</h2>
+<p>Elabore uma página que dada a data de nascimento de um nadador classifica-o em uma das
+    seguintes categorias:</p>
+<table border=1px solid style="width:100%">
+    <tr>
+        <th>Categoria</th>
+        <th>Idade</th>
+    </tr>
+    <tr>
+        <td>Infantil A</td>
+        <td>5 - 7 anos</td>
+    </tr>
+    <tr>
+        <td>Infantil B</td>
+        <td>8 - 10 anos</td>
+    </tr>
+    <tr>
+        <td>Juvenil A</td>
+        <td>11 - 13 anos</td>
+    </tr>
+    <tr>
+        <td>Juvenil B</td>
+        <td>14 - 17 anos</td>
+    </tr>
+    <tr>
+        <td>Adulto</td>
+        <td>Maiores de 18 anos</td>
+    </tr>
+</table>
+
+<form method="post" class="col-md-6 offset-md-3 col-sm-12">
+    <div class="form-row">
+        <div class="form-group col-md-6 col-sm-12">
+            <label for="Idade">Informe idade</label>
+            <input type="number" placeholder="Idade" class="form-control" id="Idade" name="Idade" required>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Calcular</button>
+    <h1 class="mt-3 text-center">@ViewData["Resultado"]</h1>
+</form>

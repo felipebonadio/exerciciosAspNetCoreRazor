@@ -1,0 +1,30 @@
+﻿@page
+@model Exercicios.Pages.Repeticao.Enquanto.Exercicio2Model
+@{
+    ViewData["Title"] = "Soma";
+}
+
+<h1 class="text-center display-4">Estrutura de Repetição - WHILE</h1>
+<h2 class="text-center display-4">Exercício 2</h2>
+<p>
+    Faça um algoritmo que leia um número n, some todos os números inteiros de 1 a 
+    n, e mostre o resultado obtido.
+</p>
+<form method="post" class="col-md-4 offset-md-4 col-sm-12">
+    <div class="form-group">
+        <label for="Numero">Informe um número:</label>
+        <input type="number" class="form-control" name="Numero" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Calcular</button>
+    @if(ViewData["Soma"]!=null)
+    {
+        <table class="table table-striped my-3">
+            @foreach(var linha in ViewBag.Soma)
+            {
+                <tr>
+                    <td class="text-center">@linha</td>
+                </tr>
+            }
+        </table>
+    }
+</form>

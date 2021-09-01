@@ -1,0 +1,30 @@
+﻿@page
+@model Exercicios.Pages.Repeticao.Repita.Exercicio2Model
+@{
+    ViewData["Title"] = "Impressão";
+}
+
+<h1 class="text-center display-4">Estrutura de Repetição - DO</h1>
+<h2 class="text-center display-4">Exercício 2</h2>
+
+<p class="text-center">
+ Faça um algoritmo que imprima todos os números inteiros de 1 ao número fornecido pelo usuário.
+</p>
+
+<form method="post" class="col-md-4 offset-md-4 col-sm-12">
+    <div class="form-group">
+        <label for="Numero">Informe um número</label>
+        <input type="number" class="form-control" id="Numero" name="Numero" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Executar</button>
+    @if(ViewData["Impressao"] != null){
+        <table class="table table-striped my-3">
+            @foreach (var linha in ViewBag.Impressao)
+            {
+                <tr>
+                    <td>@linha</td>
+                </tr>
+            }
+        </table>
+    }
+</form>

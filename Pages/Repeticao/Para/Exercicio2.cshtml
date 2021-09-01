@@ -1,0 +1,28 @@
+﻿@page
+@model Exercicios.Pages.Repeticao.Para.Exercicio2Model
+@{
+    ViewData["Title"] = "Tabuada";
+}
+
+<h1 class="text-center display-4">Estrutura de Repetição - FOR</h1>
+<h2 class="text-center display-4">Exercício 1</h2>
+
+<p class="text-center">
+    A série de Fibonacci é formada pela seguinte sequência: 1, 1, 2, 3, 5, 8, 13, 21,
+    34,.... Escreva um algoritmo que gere a série de Fibonacci até o vigésimo termo
+</p>
+
+<form method="post" class="col-md-4 offset-md-4 col-sm-12 text-center">
+  
+    <button type="submit" class="btn btn-primary">Calcular</button>
+    @if(ViewData["Fibo"] != null){
+        <table class="table table-striped my-3">
+            @foreach (var linha in ViewBag.Fibo)
+            {
+                <tr>
+                    <td>@linha</td>
+                </tr>
+            }
+        </table>
+    }
+</form>

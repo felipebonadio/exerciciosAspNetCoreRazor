@@ -1,0 +1,38 @@
+﻿@page
+@model Exercicios.Pages.Condicionais.Se.IndexModel
+@{
+    ViewData["Title"] = "Condicionais If";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Estrutura Condicional</h1>
+    <h2 class="text-center display-4">SE - IF</h2>
+</div>
+<div class="row">
+    <div class="card col-lg-4 col-md-6 col-sm-12" style="padding:0">
+        <img src="@Url.Content("~/img/partida.jpg")" class=card-img-top alt="Condicional If - Partida">
+        <div class="card-body">
+            <h5 class="card-title">Partida</h5>
+            <p clas="card-text">Leia o nome de 2 times, o número de gols marcados na partida e escrever o nome do vencedor</p>
+            <a asp-page="/Condicionais/Se/Exercicio1" class="btn btn-primary">Executar</a>
+        </div>
+    </div>
+      <div class="card col-lg-4 col-md-6 col-sm-12" style="padding:0">
+        <img src="@Url.Content("~/img/banco.jpg")" class=card-img-top alt="Condicional If - Partida">
+        <div class="card-body">
+            <h5 class="card-title">Banco</h5>
+            <p clas="card-text">Leia o número da conta do cliente, saldo, débito e crédito. Após, calcular e
+            escrever o saldo atual. Escrever se o saldo é positivo ou negativo.</p>
+            <a asp-page="/Condicionais/Se/Exercicio2" class="btn btn-primary">Executar</a>
+        </div>
+    </div>
+      <div class="card col-lg-4 col-md-6 col-sm-12" style="padding:0">
+        <img src="@Url.Content("~/img/credito.jpg")" class=card-img-top alt="Condicional If - Partida">
+        <div class="card-body">
+            <h5 class="card-title">Empréstimo</h5>
+            <p clas="card-text">Faça um algoritmo que leia o saldo médio de um cliente 
+            e calcule o valor do crédito que o banco pode oferecer.</p>
+            <a asp-page="/Condicionais/Se/Exercicio3" class="btn btn-primary">Executar</a>
+        </div>
+    </div>
+</div>

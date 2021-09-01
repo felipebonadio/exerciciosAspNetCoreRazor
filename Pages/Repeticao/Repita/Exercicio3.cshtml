@@ -1,0 +1,27 @@
+﻿@page
+@model Exercicios.Pages.Repeticao.Repita.Exercicio3Model
+@{
+    ViewData["Title"] = "Impares";
+}
+
+<h1 class="text-center display-4">Estrutura de Repetição - DO</h1>
+<h2 class="text-center display-4">Exercício 3</h2>
+
+<p class="text-center">
+ Faça um algoritmo que calcule o quadrado dos ímpares de 1 a 15.
+</p>
+
+<form method="post" class="col-md-4 offset-md-4 col-sm-12">
+   
+    <button type="submit" class="btn btn-primary">Executar</button>
+    @if(ViewData["Impares"] != null){
+        <table class="table table-striped my-3">
+            @foreach (var linha in ViewBag.Impares)
+            {
+                <tr>
+                    <td>@linha</td>
+                </tr>
+            }
+        </table>
+    }
+</form>

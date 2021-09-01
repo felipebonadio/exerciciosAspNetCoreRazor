@@ -1,0 +1,37 @@
+﻿@page
+@model Exercicios.Pages.Repeticao.Repita.IndexModel
+@{
+    ViewData["Title"] = "Etrutura de Repetição - DO";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Estrutura de Repetição</h1>
+    <h2 class="text-center display-4"> REPITA - DO</h2>
+</div>
+<div class="row">
+    <div class="card col-lg-4 col-md-6 col-sm-12" style="padding:0">
+        <img src="@Url.Content("~/img/tabuada.jpg")" class="card-img-top" alt="Repetição WHILE - Tabuada">
+        <div class="card-body">
+            <h5 class="card-title">Tabuada</h5>
+            <p class="card-text">Solicite ao usuário um número e informe a tabuada correspondente.</p>
+            <a asp-page="/Repeticao/Repita/Exercicio1" class="btn btn-primary">Executar</a>
+        </div>
+    </div>
+    <div class="card col-lg-4 col-md-6 col-sm-12" style="padding:0">
+        <img src="@Url.Content("~/img/impressao.jpg")" class="card-img-top" alt="Repetição WHILE - Tabuada">
+        <div class="card-body">
+            <h5 class="card-title">Impressão</h5>
+            <p class="card-text">Faça um algoritmo que imprima todos os números inteiros de 1 ao número 
+                fornecido pelo usuário.</p>
+            <a asp-page="/Repeticao/Repita/Exercicio2" class="btn btn-primary">Executar</a>
+        </div>
+    </div>
+    <div class="card col-lg-4 col-md-6 col-sm-12" style="padding:0">
+        <img src="@Url.Content("~/img/multi.png")" class="card-img-top" alt="Repetição WHILE - Tabuada">
+        <div class="card-body">
+            <h5 class="card-title">Produto Ímpares</h5>
+            <p class="card-text">Faça um algoritmo que calcule o produto dos inteiros ímpares de 1 a 15.</p>
+            <a asp-page="/Repeticao/Repita/Exercicio3" class="btn btn-primary">Executar</a>
+        </div>
+    </div>
+</div>

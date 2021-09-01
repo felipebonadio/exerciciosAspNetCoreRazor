@@ -1,0 +1,26 @@
+﻿@page
+@model Exercicios.Pages.Condicionais.Se.Exercicio3Model
+@{
+    ViewData["Title"]="Banco";
+}
+<h1 class="text-center display-4">Estrutura Condicional - If</h1>
+<h2 class="text-center display-4">Exercício </h2>
+<p> Um banco concederá um crédito pessoal aos seus clientes, variável com o saldo médio no ultimo ano. Faça um algoritmo que leia o saldo médio de um cliente 
+    e calcule o valor do crédito de acordo com a tabela abaixo. Mostre uma mensagem informando o saldo médio e o valor do crédito.</p>
+				<ul>
+                <li>de 0 a 200    - nenhum crédito</li>
+				<li>de 201 a 400  - 20% do valor do saldo crédito</li>
+				<li>de 401 a 600  - 30% do valor do saldo do crédito</li>
+				<li>acima de 601  - 40% do valor do saldo do crédito</li>
+                </ul>
+<form method="post">
+    <h1 class= "mt-3 text-center">@ViewData["Resultado"]</h1>
+    <div class="form-row">
+        <div class="form-group col-5">
+            <label for="Saldo">Saldo médio do cliente</label>
+            <input type="number" class="form-control" id="Saldo" name="Saldo" required>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Calcular</button>
+</form>
+

@@ -1,0 +1,29 @@
+﻿@page
+@model Exercicios.Pages.Operadores.Exercicio3Model
+@{
+    ViewData["Title"] = "Op. Mat. - Ex.03";
+}
+
+<h1 class="text-center display-4">Operadores Matemáticos</h1>
+<h2 class="text-center display-4">Exercício 3</h2>
+<p>
+    Escreva um algoritmo que leia o nome de um vendedor, o seu salário fixo e o total de vendas efetuadas por ele no mês (em dinheiro). 
+    Sabendo que este vendedor ganha 15% de comissão sobre suas vendas efetuadas, informar o seu nome, o salário fixo e salário no final do mês. 
+</p>
+<form method="post">
+    <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" class="form-control" id="nome" name="nome" placeholder="Informe o nome do vendedor" required>
+    </div>
+    <div class="form-group">
+        <label for="salario">Salário fixo</label>
+        <input type="text" class="form-control" id="salario" name="salario" placeholder="Informe o salario fixo do vendedor">
+    </div>
+    <div class="form-group">
+        <label for="vendas">Vendas</label>
+        <input type="text" class="form-control" id="vendas" name="vendas" placeholder="Informe o total de vendas">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Calcular</button>
+    <p class="mt-3 text-center">@ViewData["Resultado"]</p>
+</form>

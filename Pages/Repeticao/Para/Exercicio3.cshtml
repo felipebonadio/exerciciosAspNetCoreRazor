@@ -1,0 +1,45 @@
+﻿@page
+@model Exercicios.Pages.Repeticao.Para.Exercicio3Model
+@{
+    ViewData["Title"] = "Tabuada";
+}
+
+<h1 class="text-center display-4">Estrutura de Repetição - FOR</h1>
+<h2 class="text-center display-4">Exercício 1</h2>
+
+<p class="text-center">
+   Faça um algoritmo que calcula o fatorial de um número inteiro fornecido pelo usuário
+</p>
+
+<form method="post" class="col-md-4 offset-md-4 col-sm-12">
+    <div class="form-group">
+        <label for="Numero">Informe o número</label>
+        <input type="number" class="form-control" id="Numero" name="Numero" required>
+    </div>
+   
+    <button type="submit" class="btn btn-primary">Calcular</button>
+    @if(ViewData["Fatorial"] != null){
+        <table class="table table-striped my-3">
+            @foreach (var linha in ViewBag.Fatorial)
+            {
+                <tr>
+                    <td>@linha</td>
+                </tr>
+            }
+        </table>
+    }
+</form>
+
+@section Scripts{
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript">
+    let erro = '@Html.Raw(ViewData["Erro"])';
+    if (erro != ''){
+        Swal.fire(
+            '@Html.Raw(ViewData["Title"])',
+            erro,
+            'error'
+        );
+    }
+    </script>
+}

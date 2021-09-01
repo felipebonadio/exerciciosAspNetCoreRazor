@@ -1,0 +1,64 @@
+﻿@page
+@model Exercicios.Pages.Condicionais.Escolha.Exercicio2Model
+@{
+    ViewData["Title"]="Cardápio";
+}
+
+<h1 class="text-center display-4">Estrutura Condicional - Switch</h1>
+<h2 class="text-center display-4">Exercício 2</h2>
+<p>O cardápio de uma lanchonete é o seguinte:</p>
+<table border=1px solid style="width:100%">
+  <tr>
+    <th>Especificação</th>
+    <th>Código</th>
+    <th>Preço</th>
+  </tr>
+  <tr>
+    <td>Cachorro Quente</td>
+    <td>100</td>
+    <td>R$5,50</td>
+  </tr>
+  <tr>
+    <td>Bauru Simples</td>
+    <td>101</td>
+    <td>R$6,50</td>
+  </tr>
+ <tr>
+    <td>Bauru com ovo</td>
+    <td>102</td>
+    <td>R$7,50</td>
+  </tr>
+  <tr>
+    <td>Hambúrguer</td>
+    <td>103</td>
+    <td>R$6,00</td>
+  </tr>
+  <tr>
+    <td>Cheeseburger</td>
+    <td>104</td>
+    <td>R$6,30</td>
+  </tr>
+  
+  <tr>
+    <td>Refrigerante</td>
+    <td>105</td>
+    <td>R$5,00</td>
+  </tr>
+</table>
+<p>Elabora uma página que permita ao usuário informar o código do item pedido e a quantidade
+comprada, após a leitura calcule o valor a ser pago por aquele lanche.
+</p>
+<form method="post" class="col-md-6 offset-md-3 col-sm-12">
+    <div class="form-row">
+        <div class="form-group col-md-6 col-sm-12">
+            <label for="Codigo">Informe o código</label>
+            <input type="number" placeholder= "Código" class="form-control" id="Codigo" name="Codigo" required>
+        </div>
+        <div class="form-group col-md-6 col-sm-12">
+            <label for="qtde">Informe a quantidade</label>
+            <input type="number" placeholder="Quantidade" class="form-control" id="qtde" name="qtde" required>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Calcular</button>
+    <h1 class= "mt-3 text-center">@ViewData["Resultado"]</h1>
+</form>
